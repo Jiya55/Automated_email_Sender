@@ -7,12 +7,7 @@ from email.message import EmailMessage
 import datetime as dt 
 from datetime import *
 import time
-#'''
-'''
-my email_password= 'wfsjwlldzerhlgtm'
-mom email_password = 'ljfbkbmccxjnzcfw'
-'''
-#'''
+
 #read excel file of clients and send to emails listed
 mass_email_list=['jiyakirori@gmail.com', 'daranjan97@gmail.com', 'bobchrisbasket@gmail.com']
 def email_sender_bot(email_sender, email_sender_password, email_receiver, subject, body, sending_time = None):
@@ -33,15 +28,13 @@ def email_sender_bot(email_sender, email_sender_password, email_receiver, subjec
             return 
         smtp.sendmail(email_sender, email_receiver, email_creator.as_string())
         print('email sent')
-'''for i in mass_email_list:
-    email_sender_bot('jiyakirori@gmail.com','wfsjwlldzerhlgtm', i, 'Mass email test', 'Hello')'''
+
 def main():
     print('Hello, Welcome to auto mail')
     time.sleep(1)
     print('Please answer the following questions to send an auto mail:')
     time.sleep(1)
     email_sender=input('sender: ')
-    print('Jiya:wfsjwlldzerhlgtm; Sonia:ljfbkbmccxjnzcfw')
     email_sender_password=input('app password: ')
     email_receiver = input('Reciver gmail: ')
     subject= input('subject: ') 
